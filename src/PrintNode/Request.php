@@ -182,9 +182,10 @@ class Request
         curl_setopt($curlHandle, CURLOPT_USERPWD, (string)$this->credentials);
 
         curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($curlHandle, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYHOST, 2);
 
-		curl_setopt($curlHandle, CURLOPT_TIMEOUT, 4);
+        curl_setopt($curlHandle, CURLOPT_TIMEOUT, 4);
+        curl_setopt($curlHandle, CURLOPT_CONNECTTIMEOUT, 4);
 
         curl_setopt($curlHandle, CURLOPT_FOLLOWLOCATION, true);
 
